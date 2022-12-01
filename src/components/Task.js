@@ -1,11 +1,29 @@
-import React from 'react'
+import React from 'react' 
 
 
-const Task = () => {
+const Task = (props) => {
+
+   this.state = {
+      value : 'jjjjj'
+   }
+
+   const input = document.querySelector('input');
+   
+ 
+
+  
+   
+  const  handleOnClick = () =>{
+      console.log("dziala");
+      
+      
+   }
+
     return (
        <div>
-          <input className='input'></input>
-          <button className='button'>Add</button>
+          <input className='input' value={value}></input>
+          <button className='button' onClick={handleOnClick}>Add</button>
+          <p>Zadanie : {this.state.value}</p>
        </div>
       );
 }
