@@ -1,24 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
 import Task from './components/Task.js';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>To do List</h1>
+class App extends React.Component {
+  state = { 
+    value : '',
+    activ : true ,
+   } 
+
+   input = document.querySelector('input');
+
+
+
+  render() { 
+
+    
+    return (
       <div>
+        <Task ></Task>
+        <input className='input'></input>
+        
 
-       <p className='task'>Zadanie do zrobienia</p>
-
-          <Task></Task>
-
-       </div>
-
-       <p> Zadania do zrobienia</p>
-       <h1></h1>
-
-    </div>
-  );
+      
+      
+      </div>
+    );
+  }
 }
 
+
+ 
 export default App;
+
+
+
+
