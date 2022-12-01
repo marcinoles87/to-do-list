@@ -5,21 +5,33 @@ import React from 'react'
 
 class App extends React.Component {
   state = { 
-    value : '',
+    task : '',
     activ : true ,
    } 
 
    input = document.querySelector('input');
 
+   handleChange = (e) => {
+    this.setState({
+      task : this.input.value
+    })
+
+   }
+
+
 
 
   render() { 
-
+    const task = this.state.task
     
     return (
       <div>
         <Task ></Task>
-        <input className='input'></input>
+        <input 
+              className='input'
+              value={task}
+              onChange={this.handleChange}>
+         </input>
         
 
       
