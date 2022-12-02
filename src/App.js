@@ -8,6 +8,7 @@ class App extends React.Component {
     items : [] ,
     text : '' ,
     activ : true ,
+    
    } 
 
    input = document.querySelector('input');
@@ -30,6 +31,7 @@ class App extends React.Component {
 
     const newItem  = {
       text : this.state.text ,
+      id : Date.now() ,
     };
 
     this.setState( state => ( {
@@ -46,7 +48,7 @@ class App extends React.Component {
     
     return (
       <div>
-        <Task value={this.state.task}></Task>
+        <Task items={this.state.items}></Task>
         <input 
               className='input'
               value={task}
@@ -54,7 +56,7 @@ class App extends React.Component {
          </input>
         
         <button className='button' onClick={this.handleClick}> Add </button>
-        <ul className='list'></ul>
+        
 
       
       
