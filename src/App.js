@@ -13,7 +13,7 @@ class App extends React.Component {
 
    handleChange = (e) => {
     this.setState({
-      task : this.input.value
+      task : e.target.value
     })
 
    }
