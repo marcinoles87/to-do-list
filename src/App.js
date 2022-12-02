@@ -5,7 +5,8 @@ import React from 'react'
 
 class App extends React.Component {
   state = { 
-    task : '',
+    items : [] ,
+    text : '' ,
     activ : true ,
    } 
 
@@ -13,7 +14,7 @@ class App extends React.Component {
 
    handleChange = (e) => {
     this.setState({
-      task : e.target.value
+      text : e.target.value
       
     })
 
@@ -23,8 +24,20 @@ class App extends React.Component {
 
 
 
-   handleClick = () => {
-    console.log('klik')
+   handleClick = (e) => {
+
+    e.preventDefault();
+
+    const newItem  = {
+      text : this.state.text ,
+    };
+
+    this.setState( state => ( {
+      items : state.items.concat(newItem) ,
+      text : '',
+    }))
+   
+
    }
 
 
@@ -40,7 +53,8 @@ class App extends React.Component {
               onChange={this.handleChange}>
          </input>
         
-        <button className='button' onClick={this.handleClick}>add</button>
+        <button className='button' onClick={this.handleClick}> Add </button>
+        <ul className='list'></ul>
 
       
       
