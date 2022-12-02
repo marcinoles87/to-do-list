@@ -14,11 +14,18 @@ class App extends React.Component {
    handleChange = (e) => {
     this.setState({
       task : e.target.value
+      
     })
+
+    console.log(this.state.task)
 
    }
 
 
+
+   handleClick = () => {
+    console.log('klik')
+   }
 
 
   render() { 
@@ -26,13 +33,14 @@ class App extends React.Component {
     
     return (
       <div>
-        <Task ></Task>
+        <Task value={this.state.task}></Task>
         <input 
               className='input'
               value={task}
               onChange={this.handleChange}>
          </input>
         
+        <button className='button' onClick={this.handleClick}>add</button>
 
       
       
