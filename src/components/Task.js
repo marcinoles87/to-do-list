@@ -1,18 +1,19 @@
 import React from 'react' 
 
 
+const handleDone = () => {
 
+}
+
+
+const handleRemove = () => {
+   
+}
 
 
 const Task = ({items}) => {
 
-   handleDone = ({
-
-   })
-
-   handleRemove = ({
-      
-   })
+ 
 
     return (
        <div>

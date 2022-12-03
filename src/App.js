@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Task from './components/Task.js';
 import React from 'react'
@@ -36,7 +36,7 @@ class App extends React.Component {
 
     this.setState( state => ( {
       items : state.items.concat(newItem) ,
-      text : '',
+      text : ' ',
     }))
    
 
