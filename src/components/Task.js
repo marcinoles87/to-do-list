@@ -2,7 +2,17 @@ import React from 'react'
 
 
 
+
+
 const Task = ({items}) => {
+
+   handleDone = ({
+
+   })
+
+   handleRemove = ({
+      
+   })
 
     return (
        <div>
@@ -10,8 +20,8 @@ const Task = ({items}) => {
             {items.map(item => (
                <li key={item.id}>
                   {item.text}
-                  <button>done</button>
-                  <button>remove</button>
+                  <button onClick={handleDone}>done</button>
+                  <button onClick={handleRemove}>remove</button>
                </li>
                
             ))}
