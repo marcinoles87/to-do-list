@@ -9,11 +9,16 @@ const handleRemove = () => {
 }
 
 
-const Task = ({items}) => {
+const Task = ({items},{activ}) => {
 
 
-const handleDone = () => {
-   console.log('dziala')
+const handleDone = (props) => {
+  const li = document.querySelectorAll('li');
+  console.log(activ)
+  console.log(items)
+  if(li === true){
+   li.style.color = 'red'
+  }
    
 }
  
@@ -24,6 +29,7 @@ const handleDone = () => {
             {items.map(item => (
                <li key={item.id}>
                   {item.text}
+                  {item.active}
                   <button onClick={handleDone}>done</button>
                   <button onClick={handleRemove}>remove</button>
                </li>

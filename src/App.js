@@ -15,7 +15,8 @@ class App extends React.Component {
 
    handleChange = (e) => {
     this.setState({
-      text : e.target.value
+      text : e.target.value,
+      activ : !activ
       
     })
 
@@ -37,6 +38,7 @@ class App extends React.Component {
     this.setState( state => ( {
       items : state.items.concat(newItem) ,
       text : ' ',
+      activ : true
     }))
    
 
@@ -44,11 +46,11 @@ class App extends React.Component {
 
 
   render() { 
-    const task = this.state.task
+    const task = this.state.text
     
     return (
       <div>
-        <Task items={this.state.items}></Task>
+        <Task items={this.state.items} activ={this.state.activ}></Task>
         <input 
               className='input'
               value={task}
