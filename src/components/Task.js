@@ -12,13 +12,7 @@ const Task = ({items},{activ}) => {
 
 
 
-const handleDone = (props) => {
-  const li = document.querySelectorAll('li');
-    li.style.color = 'blue'
-    
-  
- 
-}
+console.log(items)
  
 
     return (
@@ -26,9 +20,11 @@ const handleDone = (props) => {
          <ul>
             {items.map(item => (
                <li key={item.id}>
+
                   {item.text}
                   {item.active}
-                  <button onClick={handleDone}>done</button>
+                  
+                 
                   <button onClick={handleRemove}>remove</button>
                 
                </li>

@@ -20,7 +20,7 @@ class App extends React.Component {
       
     })
 
-    console.log(this.state.task)
+    
 
    }
 
@@ -33,12 +33,13 @@ class App extends React.Component {
     const newItem  = {
       text : this.state.text ,
       id : Date.now() ,
+      activ : false,
     };
 
     this.setState( state => ( {
       items : state.items.concat(newItem) ,
       text : ' ',
-      activ : true
+    
     }))
    
 
@@ -53,7 +54,7 @@ class App extends React.Component {
         <Task items={this.state.items} activ={this.state.activ}></Task>
         <input 
               className='input'
-              value={task}
+              value={this.state.text}
               onChange={this.handleChange}>
          </input>
         
