@@ -1,16 +1,12 @@
 import React from 'react' 
 
 
-
-
-
-
-const Task = ({items},{activ} , {name}) => {
+const Task = ({items},{activ} ) => {
 
    
 const handleRemove = () => {
   
-   if(activ === true){
+  if(activ === true){
 
    }
    
@@ -23,7 +19,7 @@ const handleRemove = () => {
                <li key={item.id}>
                   
                   {item.text}
-                  {name}
+                
                 
                   
                  
