@@ -14,8 +14,9 @@ const Task = ({items},{activ}) => {
 
 const handleDone = (props) => {
   const li = document.querySelectorAll('li');
- 
-  console.log(items)
+    li.style.color = 'blue'
+    
+  
  
 }
  
