@@ -1,18 +1,21 @@
 import React from 'react' 
 
 
-const handleDone = () => {
 
-}
 
 
 const handleRemove = () => {
-   
+
 }
 
 
 const Task = ({items}) => {
 
+
+const handleDone = () => {
+   console.log('dziala')
+   
+}
  
 
     return (
