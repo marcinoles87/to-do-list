@@ -3,7 +3,6 @@ import React from 'react'
 
 
 
-
 const handleRemove = () => {
 
 }
@@ -12,14 +11,12 @@ const handleRemove = () => {
 const Task = ({items},{activ}) => {
 
 
+
 const handleDone = (props) => {
   const li = document.querySelectorAll('li');
-  console.log(activ)
+ 
   console.log(items)
-  if(li === true){
-   li.style.color = 'red'
-  }
-   
+ 
 }
  
 
@@ -32,6 +29,7 @@ const handleDone = (props) => {
                   {item.active}
                   <button onClick={handleDone}>done</button>
                   <button onClick={handleRemove}>remove</button>
+                
                </li>
                
             ))}

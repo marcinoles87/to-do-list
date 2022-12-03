@@ -16,7 +16,7 @@ class App extends React.Component {
    handleChange = (e) => {
     this.setState({
       text : e.target.value,
-      activ : !activ
+      activ : true
       
     })
 
