@@ -3,26 +3,28 @@ import React from 'react'
 
 
 
+
+
+const Task = ({items},{activ} , {name}) => {
+
+   
 const handleRemove = () => {
+  
+   if(activ === true){
 
+   }
+   
 }
-
-
-const Task = ({items},{activ}) => {
-
-
-
-console.log(items)
- 
 
     return (
        <div>
          <ul>
             {items.map(item => (
                <li key={item.id}>
-
+                  
                   {item.text}
-                  {item.active}
+                  {name}
+                
                   
                  
                   <button onClick={handleRemove}>remove</button>

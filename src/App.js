@@ -8,8 +8,12 @@ class App extends React.Component {
     items : [] ,
     text : '' ,
     activ : true ,
+    data : Date.now() ,
+    imie : 'jan'
     
    } 
+
+   
 
    input = document.querySelector('input');
 
@@ -21,7 +25,6 @@ class App extends React.Component {
     })
 
     
-
    }
 
 
@@ -47,11 +50,12 @@ class App extends React.Component {
 
 
   render() { 
-    const task = this.state.text
+    // const task = this.state.text
     
+  
     return (
       <div>
-        <Task items={this.state.items} activ={this.state.activ}></Task>
+        <Task items={this.state.items} activ={this.state.activ} data={this.state.data} name={this.state.imie}></Task>
         <input 
               className='input'
               value={this.state.text}
