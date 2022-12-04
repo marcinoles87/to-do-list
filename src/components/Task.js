@@ -3,18 +3,22 @@ import React from 'react'
 
 const Task = (props) => {
 
-const {items  , activ , name} = props
+const {items  , activ  , name} = props
 
-const loacalData = String(Date());
+const date= new Date ();
+const newDate = date.toLocaleDateString();
 
 
    
-const handleRemove = (items) => {
+const handleRemove = (activ) => {
   
-  if(activ === true)(
+  if(activ === true){
    console.log("dziala")
 
-  )
+  }
+   
+
+  
    
 }
 
@@ -24,7 +28,7 @@ const handleRemove = (items) => {
             {items.map(item => (
                <li key={item.id}>
                   
-                  {item.text} - {loacalData} - {name}
+                  {item.text} - {newDate} - {name} - 
                   <button onClick={handleRemove}>remove</button>
                 
                </li>

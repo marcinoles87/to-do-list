@@ -8,7 +8,6 @@ class App extends React.Component {
     items : [] ,
     text : '' ,
     activ : true ,
-    data : Date.now() ,
     imie : 'jan'
     
    } 
@@ -55,10 +54,12 @@ class App extends React.Component {
   
     return (
       <div>
-        <Task items={this.state.items} 
+        <h1> To Do List - zrob swoja liste</h1>
+        <Task 
+        items={this.state.items} 
         activ={this.state.activ} 
-        data={this.state.data}
-        name={this.state.imie}> </Task>
+        name={this.state.imie}> 
+        </Task>
 
         <input 
               className='input'
@@ -66,7 +67,7 @@ class App extends React.Component {
               onChange={this.handleChange}>
          </input>
         
-        <button className='button' onClick={this.handleClick}> Add </button>
+        <button className='button' onClick={this.handleClick} > Add </button>
         
 
       
