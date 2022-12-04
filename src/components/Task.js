@@ -11,10 +11,13 @@ const newDate = date.toLocaleDateString();
 
    
 const handleRemove = () => {
-  
+
+   
+   
   if(activ === true){
      
    document.querySelector('li').style.backgroundColor = "red"
+   
 
   }
    
