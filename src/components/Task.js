@@ -1,8 +1,11 @@
 import React from 'react' 
 
 
-const Task = ({items},{activ} ) => {
+const Task = (props) => {
 
+const {items , data , activ } = props
+
+const loacalData = data.toString();
    
 const handleRemove = () => {
   
@@ -22,7 +25,7 @@ const handleRemove = () => {
                 
                 
                 
-                 
+                  {loacalData}
                   <button onClick={handleRemove}>remove</button>
                 
                </li>

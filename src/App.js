@@ -55,7 +55,11 @@ class App extends React.Component {
   
     return (
       <div>
-        <Task items={this.state.items} activ={this.state.activ} data={this.state.data} name={this.state.imie}></Task>
+        <Task items={this.state.items} 
+        activ={this.state.activ} 
+        data={this.state.data}
+        name={this.state.imie}> </Task>
+        
         <input 
               className='input'
               value={this.state.text}
