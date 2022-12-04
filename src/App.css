@@ -1,9 +1,20 @@
 body{
     text-align: center;
+    background-color: rgb(51, 27, 73);
+}
+
+div {
+
+    background-color: rgb(173, 167, 255);
+}
+
+ul {
+    list-style-type: none;
 }
 
 
 li{
+    text-transform: uppercase;
     margin:10px;
     font-size: 20px;
     color:white;
