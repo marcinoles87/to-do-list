@@ -10,10 +10,11 @@ const newDate = date.toLocaleDateString();
 
 
    
-const handleRemove = (activ) => {
+const handleRemove = () => {
   
   if(activ === true){
-   console.log("dziala")
+     
+   document.querySelector('li').style.backgroundColor = "red"
 
   }
    

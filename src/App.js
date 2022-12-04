@@ -7,7 +7,7 @@ class App extends React.Component {
   state = { 
     items : [] ,
     text : '' ,
-    activ : true ,
+    activ : false ,
     imie : 'jan'
     
    } 
@@ -35,7 +35,7 @@ class App extends React.Component {
     const newItem  = {
       text : this.state.text ,
       id : Date().toString() ,
-      activ : false,
+      activ : true,
     };
 
     this.setState( state => ( {
