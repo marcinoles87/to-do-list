@@ -3,15 +3,18 @@ import React from 'react'
 
 const Task = (props) => {
 
-const {items , data , activ } = props
+const {items  , activ , name} = props
 
-const loacalData = data.toString();
+const loacalData = String(Date());
+
+
    
-const handleRemove = () => {
+const handleRemove = (items) => {
   
-  if(activ === true){
+  if(activ === true)(
+   console.log("dziala")
 
-   }
+  )
    
 }
 
@@ -21,11 +24,7 @@ const handleRemove = () => {
             {items.map(item => (
                <li key={item.id}>
                   
-                  {item.text}
-                
-                
-                
-                  {loacalData}
+                  {item.text} - {loacalData} - {name}
                   <button onClick={handleRemove}>remove</button>
                 
                </li>

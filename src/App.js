@@ -35,7 +35,7 @@ class App extends React.Component {
 
     const newItem  = {
       text : this.state.text ,
-      id : Date.now() ,
+      id : Date().toString() ,
       activ : false,
     };
 
@@ -59,7 +59,7 @@ class App extends React.Component {
         activ={this.state.activ} 
         data={this.state.data}
         name={this.state.imie}> </Task>
-        
+
         <input 
               className='input'
               value={this.state.text}
