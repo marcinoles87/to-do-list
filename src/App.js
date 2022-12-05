@@ -9,7 +9,7 @@ class App extends React.Component {
     text : '' ,
     activ : false ,
     imie : 'jan' ,
-    id : 0
+    id : '',
     
    } 
 
