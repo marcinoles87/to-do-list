@@ -10,10 +10,10 @@ const newDate = date.toLocaleDateString();
 
 
    
-const handleRemove = (item) => {
+const handleDelete = () => {
 
-   console.log(item)
-   items.pop();
+ 
+
    
   if(activ === true){
      
@@ -35,7 +35,7 @@ const handleRemove = (item) => {
                <li key={item.id}>
                   
                   {item.text} - {newDate} - {name} - 
-                  <button  onClick={handleRemove}>remove</button>
+                  <button  onClick={handleDelete}>remove</button>
                 
                </li>
                
