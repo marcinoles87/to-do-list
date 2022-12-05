@@ -10,14 +10,16 @@ const newDate = date.toLocaleDateString();
 
 
    
-const handleRemove = () => {
+const handleRemove = (item) => {
 
-   
+   console.log(item)
+   items.pop();
    
   if(activ === true){
      
    document.querySelector('li').style.backgroundColor = "red"
    
+  
 
   }
    
@@ -33,7 +35,7 @@ const handleRemove = () => {
                <li key={item.id}>
                   
                   {item.text} - {newDate} - {name} - 
-                  <button onClick={handleRemove}>remove</button>
+                  <button  onClick={handleRemove}>remove</button>
                 
                </li>
                
