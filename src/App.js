@@ -8,7 +8,8 @@ class App extends React.Component {
     items : [] ,
     text : '' ,
     activ : false ,
-    imie : 'jan'
+    imie : 'jan' ,
+    id : 0
     
    } 
 
@@ -41,6 +42,7 @@ class App extends React.Component {
     this.setState( state => ( {
       items : state.items.concat(newItem) ,
       text : ' ',
+      id : Math.random()*10 ,
     
     }))
    
@@ -58,7 +60,8 @@ class App extends React.Component {
         <Task 
         items={this.state.items} 
         activ={this.state.activ} 
-        name={this.state.imie}> 
+        name={this.state.imie}
+        id = {this.state.id}> 
         </Task>
 
         <input 

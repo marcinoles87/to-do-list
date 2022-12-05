@@ -3,28 +3,24 @@ import React from 'react'
 
 const Task = (props) => {
 
-const {items  , activ  , name} = props
+const {items  , activ  , name , id} = props
 
 const date= new Date ();
 const newDate = date.toLocaleDateString();
 
 
-   
-const handleDelete = () => {
-
- 
 
    
+const handleDelete = (id) => {
+
+   console.log(id)
   if(activ === true){
      
-   document.querySelector('li').style.backgroundColor = "red"
    
-  
+ 
 
   }
-   
-
-  
+ 
    
 }
 
@@ -35,7 +31,7 @@ const handleDelete = () => {
                <li key={item.id}>
                   
                   {item.text} - {newDate} - {name} - 
-                  <button  onClick={handleDelete}>remove</button>
+                  <button  onClick={handleDelete.bind(this , id)}>remove</button>
                 
                </li>
                
