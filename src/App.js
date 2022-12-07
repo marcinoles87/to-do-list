@@ -43,9 +43,12 @@ class App extends React.Component {
     this.setState( state => ( {
       items : state.items.concat(newItem) ,
       text : ' ',
-      id : Math.random()*10 ,
+      id : Math.floor(Math.random()*100) ,
     
     }))
+
+    console.log(this.state.items)
+    console.log(this.state.items.length)
    
 
    }

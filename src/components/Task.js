@@ -37,10 +37,13 @@ const handleDelete = (id) => {
                   <button  onClick={handleDelete.bind(this , id)}>remove</button>
                 
                </li>
+
                
             ))}
            
          </ul> 
+
+         <h2>ilosc zadan do zrobienia : {items.length}</h2>
          
        </div>
       );

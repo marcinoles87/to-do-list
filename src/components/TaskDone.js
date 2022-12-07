@@ -9,7 +9,7 @@ import React from "react";
 
 const TaskDone = (props) => {
 
-    const endDate = new Date().getDate()
+    const endDate = new Date().getFullYear
 
     console.log(props.id)
 
@@ -25,3 +25,4 @@ const TaskDone = (props) => {
 }
  
 export default TaskDone;
+ 
