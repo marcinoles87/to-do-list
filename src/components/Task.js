@@ -14,15 +14,14 @@ const newDate = date.toLocaleDateString();
 const handleDelete = (id) => {
 
    const data = [items]
-   const index = data.findIndex(id)
-   console.log(index)
+   // const index = data.findIndex(id)
+   
 
 
  
 
   if(activ === true){
-     console.log(data)
-   
+    
   }
  
    

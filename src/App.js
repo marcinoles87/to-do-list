@@ -2,6 +2,7 @@
 import './App.css';
 import Task from './components/Task.js';
 import React from 'react'
+import TaskDone from './components/TaskDone';
 
 class App extends React.Component {
   state = { 
@@ -71,6 +72,13 @@ class App extends React.Component {
          </input>
         
         <button className='button' onClick={this.handleClick} > Add </button>
+
+        
+        <div>
+        <h1> Task Done</h1>
+        <TaskDone id ={this.state.id}></TaskDone>
+
+        </div>
         
 
       
