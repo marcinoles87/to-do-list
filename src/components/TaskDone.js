@@ -3,10 +3,6 @@ import React from "react";
 
 
 
-
-
-
-
 const TaskDone = (props) => {
 
     const {id , items} = props

@@ -47,14 +47,11 @@ class App extends React.Component {
     
     }))
 
-    console.log(this.state.items)
-    console.log(this.state.items[2])
-    console.log(this.state.items.length)
+   
 
-    if(this.state.activ === true && this.state.items.length > 1 ) {
-      const li = document.querySelector('li')
-      li.style.backgroundColor = 'blue'
-    }
+   
+    console.log(this.state.items.length)
+    console.log(this.state.items)
  
     }
 

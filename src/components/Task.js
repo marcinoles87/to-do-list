@@ -7,18 +7,15 @@ const {items  , activ  , name , id} = props
 
 const date= new Date ();
 const newDate = date.toLocaleDateString();
-
-
-
    
-const handleDelete = (id) => {
+const handleDelete = () => {
 
-   const data = [items]
   
    if(activ === true && items.length > 1 ) {
       const li = document.querySelector('li')
       li.style.backgroundColor = 'red'
       li.style.textDecoration = 'line-through'
+      
     }
 
  
@@ -37,6 +34,8 @@ const handleDelete = (id) => {
                   <button  onClick={handleDelete.bind(this , id)}>remove</button>
                 
                </li>
+
+               
 
                
             ))}
