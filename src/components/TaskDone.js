@@ -9,11 +9,11 @@ import React from "react";
 
 const TaskDone = (props) => {
 
-    const {id} = props
+    const {id , items} = props
 
     const endDate = new Date().getDate()
 
-    console.log(id)
+   
 
     return ( 
         <>

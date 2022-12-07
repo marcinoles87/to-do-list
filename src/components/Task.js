@@ -15,14 +15,13 @@ const handleDelete = (id) => {
 
    const data = [items]
   
-   
-
+   if(activ === true && items.length > 1 ) {
+      const li = document.querySelector('li')
+      li.style.backgroundColor = 'red'
+      li.style.textDecoration = 'line-through'
+    }
 
  
-
-  if(activ === true){
-    
-  }
  
    
 }
@@ -34,6 +33,7 @@ const handleDelete = (id) => {
                <li key={item.id}>
                   
                   {item.text} - {newDate} - {name} - 
+
                   <button  onClick={handleDelete.bind(this , id)}>remove</button>
                 
                </li>
