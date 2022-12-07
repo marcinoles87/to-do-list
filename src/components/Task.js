@@ -21,7 +21,7 @@ const handleDelete = (id) => {
  
 
   if(activ === true){
-     
+     console.log(data)
    
   }
  
