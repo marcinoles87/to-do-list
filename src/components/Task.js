@@ -4,12 +4,17 @@ import { useState } from 'react';
 
 const Task = (props) => {
 
-   const [task , setTask] = useState()
+   let [task , setTask] = useState()
+
+
 
 const {items  , activ  , name , id} = props
 
 const date= new Date ();
 const newDate = date.toLocaleDateString();
+
+
+
    
 const handleDelete = (id) => {
 
@@ -21,6 +26,10 @@ const handleDelete = (id) => {
    console.log(index)
    tasks.splice(index,1)
    console.log(tasks)
+
+   setTask(
+      task = tasks
+   )
 
    
   
@@ -47,7 +56,7 @@ const handleDelete = (id) => {
                   {item.text} - {newDate} - {name} - 
 
                   <button  onClick={handleDelete.bind(this , id)}>remove</button>
-                
+                  
                </li>
 
                
