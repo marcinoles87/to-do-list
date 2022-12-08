@@ -51,9 +51,7 @@ class App extends React.Component {
 
    
 
-    console.log(idFirst)
-    console.log(this.state.items.length)
-    console.log(this.state.items)
+   
  
     }
 

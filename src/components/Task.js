@@ -22,9 +22,11 @@ const handleDelete = (id) => {
    
 
    const tasks = [...items] 
-   const index = tasks.findIndex( task => task.id === id)-1
+   console.log(tasks)
+   console.log(id)
+   const index = tasks.findIndex( task => task.id === id)
    console.log(index)
-   tasks.splice(index,1)
+   // tasks.splice(index,1)
    console.log(tasks)
 
    setTask(
