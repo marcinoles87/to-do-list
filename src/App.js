@@ -32,24 +32,26 @@ class App extends React.Component {
 
    handleClick = (e) => {
 
+    const idFirst = Math.floor(Math.random()*100);
+
     e.preventDefault();
 
     const newItem  = {
       text : this.state.text ,
-      id : Date().toString() ,
+      id : idFirst,
       activ : true,
     };
 
     this.setState( state => ( {
       items : state.items.concat(newItem) ,
       text : ' ',
-      id : Math.floor(Math.random()*100) ,
+      id : idFirst ,
     
     }))
 
    
 
-   
+    console.log(idFirst)
     console.log(this.state.items.length)
     console.log(this.state.items)
  

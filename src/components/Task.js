@@ -8,8 +8,15 @@ const {items  , activ  , name , id} = props
 const date= new Date ();
 const newDate = date.toLocaleDateString();
    
-const handleDelete = () => {
+const handleDelete = (id) => {
 
+   
+
+   const tasks = [...items] 
+   const index = tasks.findIndex( task => task.id === id)
+   console.log(index)
+   tasks.splice(index,1)
+   console.log(tasks)
   
    if(activ === true && items.length > 1 ) {
       const li = document.querySelector('li')
