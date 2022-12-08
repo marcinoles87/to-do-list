@@ -1,7 +1,10 @@
 import React from 'react' 
+import { useState } from 'react';
 
 
 const Task = (props) => {
+
+   const [task , setTask] = useState()
 
 const {items  , activ  , name , id} = props
 
@@ -11,12 +14,15 @@ const newDate = date.toLocaleDateString();
 const handleDelete = (id) => {
 
    
+   
 
    const tasks = [...items] 
-   const index = tasks.findIndex( task => task.id === id)
+   const index = tasks.findIndex( task => task.id === id)-1
    console.log(index)
    tasks.splice(index,1)
    console.log(tasks)
+
+   
   
    if(activ === true && items.length > 1 ) {
       const li = document.querySelector('li')
@@ -25,6 +31,8 @@ const handleDelete = (id) => {
       
     }
 
+   
+ 
  
  
    
