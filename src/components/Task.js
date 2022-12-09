@@ -26,7 +26,7 @@ const handleDelete = (id) => {
    console.log(id)
    const index = tasks.findIndex( task => task.id === id)
    console.log(index)
-   // tasks.splice(index,1)
+   tasks.splice(index,1)
    console.log(tasks)
 
    setTask(
@@ -52,7 +52,7 @@ const handleDelete = (id) => {
     return (
        <div>
          <ul>
-            {items.map(item => (
+            {tasks.map(item => (
                <li key={item.id}>
                   
                   {item.text} - {newDate} - {name} - 
