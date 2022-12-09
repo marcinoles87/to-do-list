@@ -22,28 +22,27 @@ const handleDelete = (id) => {
    
 
    const tasks = [...items] 
-   console.log(tasks)
-   console.log(id)
    const index = tasks.findIndex( task => task.id === id)
-   console.log(index)
-   tasks.splice(index,1)
-   console.log(tasks)
+   // tasks.splice(index,1)
+   
 
    setTask(
       task = tasks
+      
    )
 
-   
+  
   
    if(activ === true && items.length > 1 ) {
       const li = document.querySelector('li')
       li.style.backgroundColor = 'red'
       li.style.textDecoration = 'line-through'
       
+      
     }
 
    
- 
+   
  
  
    
@@ -52,7 +51,7 @@ const handleDelete = (id) => {
     return (
        <div>
          <ul>
-            {tasks.map(item => (
+            {items.map(item => (
                <li key={item.id}>
                   
                   {item.text} - {newDate} - {name} - 
