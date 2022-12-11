@@ -10,7 +10,7 @@ class App extends React.Component {
     text : '' ,
     activ : false ,
     imie : 'jan' ,
-    id : '',
+    id : 0,
     
    } 
 
@@ -38,14 +38,14 @@ class App extends React.Component {
 
     const newItem  = {
       text : this.state.text ,
-      id : idFirst,
+      id : this.state.id,
       activ : true,
     };
 
     this.setState( state => ( {
       items : state.items.concat(newItem) ,
       text : ' ',
-      id : idFirst ,
+      id : this.state.id+1 ,
     
     }))
 

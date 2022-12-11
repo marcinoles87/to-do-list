@@ -8,7 +8,7 @@ const Task = (props) => {
 
 
 
-const {items  , activ  , name , id} = props
+const {items  , activ  , name , id , text} = props
 
 const date= new Date ();
 const newDate = date.toLocaleDateString();
@@ -22,9 +22,11 @@ const handleDelete = (id) => {
    
 
    const tasks = [...items] 
-   const index = tasks.findIndex( task => task.id === id)
-   // tasks.splice(index,1)
+   const index = tasks.findIndex( task => task.text === text)
+   tasks.splice(index,1)
    
+   console.log(tasks)
+   console.log(index)
 
    setTask(
       task = tasks
