@@ -86,7 +86,10 @@ class App extends React.Component {
         
         <div>
         <h1> Wykonane</h1>
-        <TaskDone id ={this.state.id}></TaskDone>
+        <TaskDone 
+        id ={this.state.id} 
+        text = {this.state.text}>
+        </TaskDone>
 
         </div>
         
