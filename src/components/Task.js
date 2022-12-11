@@ -56,7 +56,7 @@ const handleDelete = (id) => {
                   
                   {item.text} - {newDate} - {name} - 
 
-                  <button  onClick={handleDelete.bind(this , id)}>remove</button>
+                  <button  onClick={handleDelete.bind(this)}>remove</button>
                   
                </li>
 
