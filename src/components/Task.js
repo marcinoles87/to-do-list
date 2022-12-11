@@ -21,15 +21,17 @@ const handleDelete = (id) => {
    
    
 
-   const tasks = [...items] 
-   const index = tasks.findIndex( task => task.text === text)
-   tasks.splice(index,1)
+  
    
-   console.log(tasks)
+   const index = items.findIndex( task => task.id === id)
    console.log(index)
+   items.splice(index,1)
+   
+   console.log(items)
+  
 
    setTask(
-      task = tasks
+      task = items
       
    )
 
@@ -58,7 +60,7 @@ const handleDelete = (id) => {
                   
                   {item.text} - {newDate} - {name} - 
 
-                  <button  onClick={handleDelete.bind(this)}>remove</button>
+                  <button  onClick={handleDelete.bind(this , id)}>remove</button>
                   
                </li>
 

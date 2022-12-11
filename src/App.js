@@ -32,7 +32,7 @@ class App extends React.Component {
 
    handleClick = (e) => {
 
-    const idFirst = Math.floor(Math.random()*100);
+    
 
     e.preventDefault();
 

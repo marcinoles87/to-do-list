@@ -7,10 +7,10 @@ const TaskDone = (props) => {
 
     const {id , items} = props
 
-    const endDate = new Date().getDay
+    let endDate = new Date().getDate
     
 
-    console.log(id)
+
 
    
 
@@ -18,7 +18,7 @@ const TaskDone = (props) => {
         <>
       
        
-        <p>data wykonania : {endDate}</p>
+        {/* <p>data wykonania : {endDate}</p> */}
         <p>zadanie wykonane : {id}</p>
         
         </>
