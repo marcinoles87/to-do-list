@@ -82,7 +82,7 @@ class App extends React.Component {
          </input>
         
         <button className='button' onClick={this.handleClick} > Add </button>
-
+        
         
         <div>
         <h1> Wykonane</h1>
